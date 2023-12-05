@@ -47,6 +47,9 @@ main {
   border-radius: 10px; /* Menambahkan border radius pada ujung */
 }
 
+.article-sidebar h2{
+  cursor: pointer;
+}
 .right-sidebar {
   flex: 0 0 30%;
   border: 2px solid black;
