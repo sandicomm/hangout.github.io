@@ -1,0 +1,71 @@
+body {
+  font-family: Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+
+.content{
+  padding: 100px 50px;
+}
+
+header {
+  color: black;
+  padding: 20px;
+  font-size: 2em;
+  font-weight: bolder;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.article-blog {
+  padding: 40px;
+  margin-bottom: 20px;
+  border: 2px solid black; /* Menambahkan border */
+  border-radius: 30px; /* Menambahkan border radius pada ujung */
+}
+
+.article-blog h2{
+  font-size: 2em;
+}
+
+.article-blog img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/*============= RIGHT SIDE BAR ARTILEl ================*/
+.article-sidebar {
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: rgb(175, 175, 175);
+  border-radius: 10px; /* Menambahkan border radius pada ujung */
+}
+
+.right-sidebar {
+  flex: 0 0 30%;
+  border: 2px solid black;
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  border-radius: 30px;
+}
+
+.right-sidebar h1{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.right-sidebar .article {
+  background-color: #ddd;
+  border: none; /* Menghapus border pada artikel di sebelah kanan */
+}
+
+.right-sidebar .article h2 {
+  color: #333; /* Mengganti warna judul artikel di sebelah kanan */
+}
