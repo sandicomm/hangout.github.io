@@ -134,6 +134,8 @@ document.querySelector(".motor").addEventListener("click",()=>{
             txtHarga[i].textContent=harga;
             console.log("lama")  
         })
+
+
     }
 })
 
@@ -249,6 +251,7 @@ let priceMb = 0
 let priceTotal = 0
 let afterDiskon = 0
 let diskonV = 0
+let kirimHarga = 0
 
 window.addEventListener("change", ()=>{
     priceMt =0
@@ -262,23 +265,29 @@ window.addEventListener("change", ()=>{
         console.log(priceMb)
     }
     priceTotal = priceMb + priceMt
+    kirimHarga = priceTotal
     
     if(priceTotal > 1500){
         diskon_v.textContent = "Diskon  20%"
         diskonV = priceTotal * 0.4
         afterDiskon = priceTotal - diskonV
+        kirimHarga = afterDiskon
     }else if(priceTotal > 1000){
         diskon_v.textContent = "Diskon  15%"
         diskonV = priceTotal * 0.3
         afterDiskon = priceTotal - diskonV
+        kirimHarga = afterDiskon
     }else if(priceTotal > 750){
         diskon_v.textContent = "Diskon  10%"
         diskonV = priceTotal * 0.2
         afterDiskon = priceTotal - diskonV
+        kirimHarga = afterDiskon
     }
 
     price.textContent = priceTotal
     diskon.textContent = diskonV 
     actualPrice.textContent = afterDiskon 
+    let metode = document.querySelector(".payment-mtd").value
+    document.querySelector(".btn-pesan a").href = `kodeBayar.html?gerai=${metode}&total=${kirimHarga}`
 
 })
