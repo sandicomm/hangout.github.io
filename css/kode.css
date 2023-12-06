@@ -12,6 +12,22 @@ section{
    border-radius: 30px;
 }
 
+nav{
+   display: flex;
+   justify-content: right;
+   align-items: center;
+   width: 100%;
+   padding-right: 20px;
+   text-align: right;
+   margin-bottom: 20px;
+}
+
+nav a{
+   font-size: 2em;
+   text-decoration: none;
+   color: black;
+   font-weight: bolder;
+}
 .waktu{
    text-align: center;
    padding: 20px;
